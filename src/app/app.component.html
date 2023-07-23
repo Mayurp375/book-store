@@ -21,49 +21,59 @@
           d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z" />
       </svg>
     </a>
-  
+
     <div class="button-data">
       <div class="login-data" (click)="openLoginDialog()">
-  
+
         <button mat-raised-button matTooltip="Login"
           aria-label="Button that displays a tooltip when focused or hovered over">
           Login
         </button>
       </div>
-  
+
       <div class="reg" (click)="openRegisterDialog()">
         <button mat-raised-button matTooltip="Login"
           aria-label="Button that displays a tooltip when focused or hovered over">
           Register
         </button>
       </div>
-  
+
       <!-- <button mat-raised-button matTooltip="Logout"
         aria-label="Button that displays a tooltip when focused or hovered over">
         Logout
       </button> -->
     </div>
-    
+
   </div>
-  <div class="list">
-    <div *ngIf="data.length > 0">
-      <div *ngFor="let item of data">
-        <img src="{{item.image}}" alt="img">
-        <p>Name: {{item.id}}</p>
-        <p>Name: {{item.name}}</p>
-        <p>Name: {{item.description}}</p>     
-      </div>
+  <div class="list-data">
+
+    <div *ngFor="let item of data">
+      <mat-card class="example-card">
+        <img mat-card-image src="{{item.image}}" alt="Photo of Item">
+
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{item.name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title> {{item.description}}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-actions>
+          <button mat-button>Buy</button>
+          <button mat-button>Add to Cart</button>
+        </mat-card-actions>
+      </mat-card>
+
+
+
+      <!-- <mat-grid-list cols="3" rowHeight="100px">
+            <img src="{{item.image}}" alt="img">
+            <mat-grid-tile *ngFor="let item of data"> {{item.id}}</mat-grid-tile>
+            <mat-grid-tile *ngFor="let item of data"> {{item.name}} </mat-grid-tile>
+            <mat-grid-tile *ngFor="let item of data"> {{item.description}} </mat-grid-tile>
+          </mat-grid-list> -->
     </div>
-    
-    <div *ngIf="data.length === 0">
-      <p>No data to display</p>
-    </div>
-  <!-- <mat-grid-list cols="4" rowHeight="2:1">
-    <mat-grid-tile>Book1</mat-grid-tile>
-    <mat-grid-tile>Book1</mat-grid-tile>
-    <mat-grid-tile>Book1</mat-grid-tile>
-    <mat-grid-tile>Book1</mat-grid-tile>
-  </mat-grid-list> -->
   </div>
 </div>
-

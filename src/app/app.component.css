@@ -261,15 +261,27 @@ footer a {
     justify-content: center;
 }
 
-.list img {
+.list-data img {
     width: 200px;
-    height: 200px;
-    object-fit: cover;
+    /* padding: 16px 36px 16px 24px; */
+    background-color: #fcf4e8;
+    
 }
 
-.list{
+.example-card {
     display: flex;
     flex-direction: row;
+    gap: 20px;
+    padding: 10px 10px;
+    max-width: 400px;
+    mat-card-actions{
+        align-items: center;
+    }
+}
+
+.example-header-image {
+    /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
+    background-size: cover;
 }
 
 svg#clouds {
@@ -319,3 +331,5 @@ svg#clouds {
         visibility: hidden;
     }
 }
+
+

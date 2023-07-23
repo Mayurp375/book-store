@@ -13,6 +13,8 @@ import { RegisterComponent } from './register/register.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule, FormsModule, ReactiveFormsModule, MatDialogModule,MatInputModule,MatRadioModule
-    ,HttpClientModule
+    ,HttpClientModule,MatGridListModule,MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

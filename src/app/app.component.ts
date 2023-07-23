@@ -5,15 +5,6 @@ import { RegisterComponent } from './register/register.component';
 import { BackendApiService } from './services/backend-api.service';
 import { HttpClient } from '@angular/common/http';
 
-
-interface Books {
-  id: Number;
-  name: String;
-  description: String;
-  image: String;
-}
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -31,9 +22,7 @@ export class AppComponent implements OnInit {
       width: '1000px',
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-
-    });
+    dialogRef.afterClosed().subscribe(result => { });
   }
   openLoginDialog(): void {
     const dataRef = this.dialog.open(LoginformComponent, {
@@ -49,9 +38,6 @@ export class AppComponent implements OnInit {
     });
   }
 
-  getDataFromJson() {
-    
-  }
   getData() {
     return this.http.get('http://localhost:3000/items');
   }
