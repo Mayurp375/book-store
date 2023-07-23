@@ -254,6 +254,24 @@ footer a {
     margin-right: 4px;
 }
 
+.display {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.list img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+}
+
 svg#clouds {
     position: fixed;
     bottom: -160px;
@@ -262,15 +280,16 @@ svg#clouds {
     width: 1920px;
 }
 
-.button-data{
+.button-data {
     display: flex;
-    gap:9px;
+    gap: 9px;
     margin: 10px;
 }
 
 .example-spacer {
     flex: 1 1 auto;
 }
+
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
 

@@ -12,7 +12,7 @@ import { RegisterComponent } from './register/register.component';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,7 @@ import {MatRadioModule} from '@angular/material/radio';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule, FormsModule, ReactiveFormsModule, MatDialogModule,MatInputModule,MatRadioModule
+    ,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

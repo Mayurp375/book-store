@@ -1,0 +1,17 @@
+{
+  
+  "items": [
+    {
+      "id": 1,
+      "name": "Item 1",
+      "description": "Description of Item 1",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Temp_plate.svg"
+    },
+    {
+      "id": 2,
+      "name": "Item 2",
+      "description": "Description of Item 2",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Temp_plate.svg"
+    }
+  ]
+}
