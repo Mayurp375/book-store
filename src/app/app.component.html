@@ -45,35 +45,5 @@
     </div>
 
   </div>
-  <div class="list-data">
-
-    <div *ngFor="let item of data">
-      <mat-card class="example-card">
-        <img mat-card-image src="{{item.image}}" alt="Photo of Item">
-
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{item.name}}</mat-card-title>
-        </mat-card-header>
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title> {{item.description}}</mat-card-title>
-        </mat-card-header>
-
-        <mat-card-actions>
-          <button mat-button>Buy</button>
-          <button mat-button>Add to Cart</button>
-        </mat-card-actions>
-      </mat-card>
-
-
-
-      <!-- <mat-grid-list cols="3" rowHeight="100px">
-            <img src="{{item.image}}" alt="img">
-            <mat-grid-tile *ngFor="let item of data"> {{item.id}}</mat-grid-tile>
-            <mat-grid-tile *ngFor="let item of data"> {{item.name}} </mat-grid-tile>
-            <mat-grid-tile *ngFor="let item of data"> {{item.description}} </mat-grid-tile>
-          </mat-grid-list> -->
-    </div>
-  </div>
+  <app-fetch-page [hero]="data"></app-fetch-page>
 </div>

@@ -24,6 +24,7 @@ p {
     flex: 1;
 }
 
+
 .toolbar {
     position: absolute;
     top: 0;
@@ -261,27 +262,34 @@ footer a {
     justify-content: center;
 }
 
-.list-data img {
-    width: 200px;
-    /* padding: 16px 36px 16px 24px; */
-    background-color: #fcf4e8;
+.list-data {
+    display: flex;
+    justify-content: center;
+    margin: 1px 10px;
+    
+}
+.card-data{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 1px 10px;
+    padding: 10px 1px
+    
+}
+.example-card{
     
 }
 
-.example-card {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 10px 10px;
-    max-width: 400px;
-    mat-card-actions{
-        align-items: center;
-    }
+.box:nth-child(2) {
+    order: 2;
 }
 
-.example-header-image {
-    /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
-    background-size: cover;
+.box:nth-child(3) {
+    order: 3;
+}
+
+select {
+    min-width: 80px;
 }
 
 svg#clouds {
@@ -301,6 +309,8 @@ svg#clouds {
 .example-spacer {
     flex: 1 1 auto;
 }
+
+
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
@@ -331,5 +341,3 @@ svg#clouds {
         visibility: hidden;
     }
 }
-
-

@@ -1,1 +1,6 @@
 npx json-server --watch db.json
+
+
+input data from anather componet to child componet 
+    error := not able to bind 
+            cause = input data type was not corract

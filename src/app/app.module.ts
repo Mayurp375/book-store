@@ -15,12 +15,14 @@ import {MatRadioModule} from '@angular/material/radio';
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import { FetchPageComponent } from './fetch-page/fetch-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginformComponent,
-    RegisterComponent
+    RegisterComponent,
+    FetchPageComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
