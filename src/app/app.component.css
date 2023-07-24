@@ -262,35 +262,7 @@ footer a {
     justify-content: center;
 }
 
-.list-data {
-    display: flex;
-    justify-content: center;
-    margin: 1px 10px;
-    
-}
-.card-data{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin: 1px 10px;
-    padding: 10px 1px
-    
-}
-.example-card{
-    
-}
 
-.box:nth-child(2) {
-    order: 2;
-}
-
-.box:nth-child(3) {
-    order: 3;
-}
-
-select {
-    min-width: 80px;
-}
 
 svg#clouds {
     position: fixed;
