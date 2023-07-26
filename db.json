@@ -1,5 +1,4 @@
 {
-  
   "items": [
     {
       "id": 1,
@@ -24,6 +23,23 @@
       "name": "Item 4",
       "description": "100",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Temp_plate.svg"
+    },
+    {
+      "id": 4,
+      "name": "Item 4",
+      "description": "100",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Temp_plate.svg"
+    }
+  ],
+  "register": [
+    
+    {
+      "firstName": "mayur ",
+      "lastName": "polojwar",
+      "gender": "male",
+      "email": "mayur@gmail.com",
+      "password": "pass",
+      "id": 1
     }
   ]
 }

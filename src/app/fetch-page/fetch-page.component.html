@@ -1,24 +1,26 @@
-<div class="list-data" style="">
+<div class="list-data">
     <div  class="card-data" style="display: flex;flex-direction: column;">
-        <mat-card class="example-card" *ngFor="let item of hero" style="display: flex;flex-direction: row;">
+        <mat-card *ngFor="let item of hero" class="example-card"  style="">
 
             <mat-card-header class="box">
                 <img mat-card-image src="{{item.image}}" alt="Photo of Item" style ="height: 150px ; width: 150px;">
             </mat-card-header>
 
-            <mat-card-header class="box">
-                <p>{{item.name}}</p>
-            </mat-card-header>
-
-            <mat-card-header class="box">
-                <mat-card-title> {{item.description}}</mat-card-title>
-            </mat-card-header> 
-
-            <mat-card-actions class="box">
-                <button mat-button>Buy</button>
-                <button mat-button><span class="material-icons">shopping_cart</span></button>
-                    
-            </mat-card-actions>
+            <div class="cart-item" >
+                <mat-card-header class="box">
+                    <p>{{item.name}}</p>
+                </mat-card-header>
+    
+                <mat-card-header class="box" style="align-items: center;">
+                    <mat-card-title>₹ {{item.description}}</mat-card-title>
+                </mat-card-header> 
+    
+                <mat-card-actions class="box">
+                    <button mat-button>Buy</button>
+                    <button mat-button><span class="material-icons">shopping_cart</span></button>
+                        
+                </mat-card-actions>
+            </div>
         </mat-card>
     </div>
 </div>

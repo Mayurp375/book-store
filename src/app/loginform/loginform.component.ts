@@ -11,7 +11,7 @@ export class LoginformComponent {
 
   empForm!: FormGroup;
 
-  submitted = false;
+  
 
   constructor(private fb: FormBuilder) {
     this.empForm = this.fb.group({

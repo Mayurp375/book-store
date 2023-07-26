@@ -13,5 +13,7 @@ export class BackendApiService {
   getItems(): Observable<any> {
     return this.http.get('http://localhost:3000/items');
   }
-  
+  registerUser(data: any): Observable<any> {
+    return this.http.post('http://localhost:3000/register', data)
+  }
 }

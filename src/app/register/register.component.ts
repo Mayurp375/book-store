@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { BackendApiService } from '../services/backend-api.service';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-register',
@@ -11,13 +13,31 @@ export class RegisterComponent {
 
   submitted = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private userService: BackendApiService,
+    private dialogRef: MatDialogRef<RegisterComponent>
+  ) {
+
     this.empForm = this.fb.group({
       firstName: '',
-      lastname: '',
+      lastName: '',
       gender: '',
       email: '',
       password: ''
     })
+  }
+
+  onFormSubmit() {
+    if (this.empForm.valid) {
+
+      this.userService.registerUser(this.empForm.value).subscribe({
+        next: (val: any) => {
+          alert('Emlopyee added succesfully');
+          console.log(this.empForm.value);
+          this.dialogRef.close(true);
+        }
+      })
+    }
   }
 }

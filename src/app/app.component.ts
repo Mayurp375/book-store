@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
 
   openRegisterDialog(): void {
     const dialogRef = this.dialog.open(RegisterComponent, {
-      width: '1000px',
+      height: '600px',
     });
 
     dialogRef.afterClosed().subscribe(result => { });
@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
   }
 
   getData() {
+    // localStorage.getItem _ to store in local storage
     return this.http.get('http://localhost:3000/items');
   }
 }

@@ -4,29 +4,29 @@
             <div mat-dialog-title style="display: flex; justify-content: center;">
                 <h1>User Details</h1>
             </div>
-            <form [formGroup]="empForm">
+            <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
                 <div mat-dialog-content class="inputForm">
                     <div class="row">
                         <mat-form-field appearance="outline">
                             <mat-label>First Name</mat-label>
-                            <input matInput>
+                            <input matInput formControlName="firstName">
                         </mat-form-field>
                         <mat-form-field appearance="outline">
                             <mat-label>Last Name</mat-label>
-                            <input matInput>
+                            <input matInput formControlName="lastName">
                         </mat-form-field>
                         <mat-form-field appearance="outline">
                             <mat-label>Email</mat-label>
-                            <input matInput>
+                            <input matInput formControlName="email">
                         </mat-form-field>
                         <mat-form-field appearance="outline">
                             <mat-label>Password</mat-label>
-                            <input matInput type="password">
+                            <input matInput type="password" formControlName="password">
                         </mat-form-field>
                     </div>
         
                     <div class="row">
-                        <mat-radio-group aria-label="Select an option" style="align-items: center;">
+                        <mat-radio-group aria-label="Select an option" style="align-items: center;" formControlName="gender">
                             <mat-radio-button value="male">Male</mat-radio-button>
                             <mat-radio-button value="Female">Female</mat-radio-button>
                             <mat-radio-button value="Others">Others</mat-radio-button>
