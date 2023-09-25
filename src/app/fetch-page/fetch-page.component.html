@@ -1,26 +1,84 @@
-<div class="list-data">
-    <div  class="card-data" style="display: flex;flex-direction: column;">
-        <mat-card *ngFor="let item of hero" class="example-card"  style="">
+<!-- <div class="list-data">
+    <div class="scroll-container">
+        <div class="card-data" style="display: flex; flex-wrap: wrap;height: 500px;justify-content: center;">
+            <mat-card *ngFor="let item of hero" class="example-card" style="justify-content: center;">
 
-            <mat-card-header class="box">
-                <img mat-card-image src="{{item.image}}" alt="Photo of Item" style ="height: 150px ; width: 150px;">
-            </mat-card-header>
+                <div class="image-data">
+                    <mat-card-header class="box">
+                        <img mat-card-image src="{{item.image}}" alt="Photo of Item"
+                            style="height: 150px ; width: 150px;">
+                    </mat-card-header>
+                </div>
 
-            <div class="cart-item" >
-                <mat-card-header class="box">
-                    <p>{{item.name}}</p>
-                </mat-card-header>
-    
-                <mat-card-header class="box" style="align-items: center;">
-                    <mat-card-title>₹ {{item.description}}</mat-card-title>
-                </mat-card-header> 
-    
-                <mat-card-actions class="box">
-                    <button mat-button>Buy</button>
-                    <button mat-button><span class="material-icons">shopping_cart</span></button>
-                        
-                </mat-card-actions>
-            </div>
-        </mat-card>
+                <div class="cart-item">
+                    <mat-card-header class="box" style="justify-content: center;">
+                        <p>{{item.name}}</p>
+                    </mat-card-header>
+
+                    <mat-card-header class="box" style="justify-content: center;">
+                        <mat-card-title>₹ {{item.description}}</mat-card-title>
+                    </mat-card-header>
+
+                    <mat-card-actions class="box" style="justify-content: center;">
+                        <button mat-button (click)="addToCart(item)">Buy</button>
+                        <button mat-button><span class="material-icons">shopping_cart</span></button>
+                    </mat-card-actions>
+                </div>
+
+            </mat-card>
+        </div>
     </div>
-</div>
+</div> -->
+
+<div class="content-container">
+  
+    <!-- Left side: Display list of items for purchase -->
+    <div class="list-data">
+        <div class="scroll-container">
+            <div class="card-data" style="display: flex; flex-wrap: wrap;height: 500px;justify-content: center;">
+                <mat-card *ngFor="let item of hero" class="example-card" style="justify-content: center;">
+  
+                    <!-- Image of the item -->
+                    <div class="image-data">
+                        <mat-card-header class="box">
+                            <img mat-card-image src="{{item.image}}" alt="Photo of Item"
+                                style="height: 150px ; width: 150px;">
+                        </mat-card-header>
+                    </div>
+  
+                    <!-- Description and Buy button for the item -->
+                    <div class="cart-item">
+                        <mat-card-header class="box" style="justify-content: center;">
+                            <p>{{item.name}}</p>
+                        </mat-card-header>
+  
+                        <mat-card-header class="box" style="justify-content: center;">
+                            <mat-card-title>₹ {{item.description}}</mat-card-title>
+                        </mat-card-header>
+  
+                        <mat-card-actions class="box" style="justify-content: center;">
+                            <button mat-button (click)="addToCart(item)">Buy</button>
+                            <button mat-button><span class="material-icons">shopping_cart</span></button>
+                        </mat-card-actions>
+                    </div>
+  
+                </mat-card>
+            </div>
+        </div>
+    </div>
+  
+    <div class="cart-display">
+        <h2>Cart Items:</h2>
+        <div *ngFor="let cartItem of cart">
+            {{ cartItem.name }} - ₹ {{cartItem.description}}
+            <!-- <button (click)="removeFromCart(cartItem.id)"><mat-icon>delete</mat-icon></button> -->
+            <button mat-button (click)="removeFromCart(cartItem.id)"><span class="material-icons">delete</span></button>
+        </div>
+        <div class="checkout">
+            <h3>Total: ₹ {{calculateTotal()}}</h3>
+            <button mat-button>Checkout</button>
+        </div>
+    </div>
+    
+  </div>
+  

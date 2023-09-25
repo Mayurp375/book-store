@@ -33,10 +33,11 @@ export class RegisterComponent {
 
       this.userService.registerUser(this.empForm.value).subscribe({
         next: (val: any) => {
-          alert('Emlopyee added succesfully');
+          alert('User registration successfull');
           console.log(this.empForm.value);
           this.dialogRef.close(true);
-        }
+          window.location.reload();//Auto reloade
+        },
       })
     }
   }

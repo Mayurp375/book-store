@@ -42,4 +42,8 @@ export class AppComponent implements OnInit {
     // localStorage.getItem _ to store in local storage
     return this.http.get('http://localhost:3000/items');
   }
+
+  registerPage(){
+    
+  }
 }

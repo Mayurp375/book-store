@@ -1,52 +1,41 @@
-.list-data {
+.scroll-container {
     display: flex;
-    justify-content: center;
-    margin: 1px 10px;
 
-}
+    padding: 10px;
 
-.example-card {
-    border: 1px solid rgba(0, 255, 242, 0.484);
-    margin: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .card-data {
-    height: 500px;
-    width: 387px;
+    flex-shrink: 0;
+    width: 100%;
+
+}
+
+.card-data .example-card {
+    margin: 10px;
+    scroll-margin-right: 10px;
+}
+
+
+
+
+.content-container {
     display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-}
-
-.box {
-    padding: 10px 1px;
-}
-
-p {
-    padding: 0px 50px;
-}
-
-.mat-mdc-card-header-text {
-    padding: 0px 50px;
-}
-
-.cart-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .list-data {
-    display: flex;
-    justify-content: space-around;
+    flex: 1;
+    /* This allows the list to take up half the available space */
+    margin-right: 20px;
+    /* Spacing between the list and the cart */
 }
 
-@media screen and (min-width: 80rem) {
-    .list-data {
-      margin: 1em 2em;
-    }
-}  
+.cart-display {
+    flex: 0.5;
+    /* This allows the cart to take up the other half of the available space */
+    border-left: 1px solid #ccc;
+    /* Optional divider line */
+    padding-left: 20px;
+}

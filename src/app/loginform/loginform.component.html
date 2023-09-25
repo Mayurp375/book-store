@@ -1,18 +1,18 @@
 <div>
-    <form [formGroup]="empForm">
+    <div >
         <div class="main">
             <div mat-dialog-title style="display: flex; justify-content: center;">
                 <h1>Log In</h1>
             </div>
-            <form [formGroup]="empForm">
+            <form >
                 <div mat-dialog-content class="inputForm">
                     <div class="row">
 
-                        <mat-form-field appearance="outline">
+                        <mat-form-field appearance="outline"formControlName="email">
                             <mat-label>Email</mat-label>
                             <input matInput>
                         </mat-form-field>
-                        <mat-form-field appearance="outline">
+                        <mat-form-field appearance="outline"  formControlName="password">
                             <mat-label>Password</mat-label>
                             <input matInput type="password">
                         </mat-form-field>
@@ -20,10 +20,11 @@
                     </div>
                 </div>
                 <div mat-dialog-action style=" display: flex; gap: 99px; justify-content: center; padding: 0 25px ;">
-                    <button mat-raised-button style="flex: 1px;">Cancel</button>
+                    <button mat-raised-button style="flex: 1px;" (click)="redirect()"> Register </button>
+                    <!-- <a routerlink="register">Register</a> -->
                     <button mat-raised-button color="primary" style="flex: 1px;">Login</button>
                 </div>
             </form>
         </div>
-    </form>
+    </div>
 </div>
